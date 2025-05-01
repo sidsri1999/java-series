@@ -13,4 +13,4 @@ An exception is a runtime error.
 
 ## Exception Types
 
-![hierarchy.](exception-handling/img/image.png)
+![hierarchy.](img/image.png)
