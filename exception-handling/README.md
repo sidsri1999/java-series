@@ -14,3 +14,37 @@ An exception is a runtime error.
 ## Exception Types
 
 ![hierarchy.](img/image.png)
+
+## Uncaught Exceptions
+
+* Let's see an example,
+```
+class Scratch {
+    public static void main(String[] args) {
+        int numerator = 5;
+        int denominator = 0;
+        int result = numerator / denominator;
+    }
+}
+```
+* The above code will throw the following exception : 
+![Output.](img/image1.png)
+* So, if we see the code has thrown an exception but we haven't written any code to handle it, so the exception got handled by default handler of java runtime system.
+* The default handler will print the stack trace from the point where exception occurred and terminates the program.
+* The print output may differ slightly based on the difference between JDKs.
+* Example to show the stack trace based on multiple methods.
+```
+class Scratch {
+    public static void main(String[] args) {
+        int numerator = 5;
+        int denominator = 0;
+        method2(numerator, denominator);
+    }
+
+    public static void method2(int numerator, int denominator) {
+        int result = numerator / denominator;
+    }
+}
+```
+* Output showing the trace of two methods:
+![Output](img/image2.png)
